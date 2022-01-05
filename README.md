@@ -13,6 +13,6 @@ Personal dotfiles.
 - Text editor: Vim
 - Fetch: Neofetch
 
-## Screenshot
+## Screenshots
 ![Workspace](https://user-images.githubusercontent.com/82092080/148259586-d5224dc4-0622-4b72-aeca-ef8c8ab77e67.png)
 
