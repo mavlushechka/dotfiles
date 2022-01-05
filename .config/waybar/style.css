@@ -1,0 +1,147 @@
+@keyframes blink-warning {
+    70% {
+        color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @warning;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @critical;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Styles
+ * -------------------------------------------------------------------------- */
+
+/* COLORS */
+
+@define-color bg #2A2E38;
+@define-color light #D8DEE9;
+@define-color warning #ebcb8b;
+@define-color critical #BF616A;
+@define-color workspacesfocused #51AFEF;
+@define-color tray @workspacesfocused;
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 1.5em;
+    min-height: 0;
+    margin: 0.2em 0.3em 0.2em 0.3em;
+}
+
+/* The whole bar */
+#waybar {
+    background: rgba(0, 0, 0, 0);
+    font-family: "Cantarell", "Font Awesome 5 Pro";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modules-center {
+     padding: 0.3em;
+     background: @bg;
+}
+
+#network {
+    color: #C278CE;
+}
+
+#pulseaudio {
+    color: #4CB4BC;
+}
+
+#pulseaudio.muted {
+    color: #BF616A;
+}
+
+#pulseaudio.source-muted {
+    color: #D8DEE9;
+}
+
+#language {
+    color: #fdffb6;
+}
+
+#clock {
+   color: #68AC5D;
+}
+
+#battery {
+   color: #9bf6ff;
+}
+
+/* Each module */
+#battery,
+#clock,
+#network,
+#pulseaudio,
+#language {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+/* Each module that should blink */
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Each critical module */
+#battery.critical {
+    color: @critical;
+}
+
+/* Each critical that should blink */
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+/* Each warning */
+#network.disconnected,
+#battery.warning {
+    background: @warning;
+    color: @nord_dark_font;
+}
+
+/* Each warning that should blink */
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+/* Workspaces stuff */
+
+#workspaces button {
+	color: @light;
+    font-weight: bold; /* Somewhy the bar-wide setting is ignored*/
+    padding: 0.3em;
+    opacity: 0.3;
+    background: none;
+    font-size: 1em;
+}
+
+#workspaces button.focused {
+    background: @workspacesfocused;
+    opacity: 1;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: @light;
+    opacity: 1;
+}
