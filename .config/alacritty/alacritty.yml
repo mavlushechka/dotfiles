@@ -1,0 +1,45 @@
+# Font
+font:
+  size:           9
+  normal:
+    family:         Dejavu Sans Mono
+    style:          Regular
+    offset:
+    x:              0
+    y:              0
+
+window:
+  padding:
+    x:              16
+    y:              16
+  dynamic_padding:  true
+background_opacity: 1
+
+colors:
+  primary:
+    background:     '#ffffff'
+    foreground:     '#2b2d42'
+    dim_foreground: '#f9cbe7'
+ 
+  cursor:
+    text:           '#2b2d42'
+    cursor:         '#d8dee9'
+ 
+  vi_mode_cursor:
+    text:           '#2b2d42'
+    cursor:         '#d8dee9'
+ 
+  selection:
+    text:           CellBackground
+    background:     CellForeground
+ 
+  normal:
+     black:         '#2b2d42'
+     red:           '#ef233c'
+     green:         '#55a630'
+     yellow:        '#ffdd00'
+     blue:          '#00b4d8'
+     magenta:       '#ff5d8f'
+     cyan:          '#00b4d8'
+     white:         '#ffffff'
+ 
