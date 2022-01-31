@@ -15,7 +15,6 @@ Personal dotfiles.
 - Fetch: Neofetch
 
 ## Screenshots
-
 ![Workspace](https://user-images.githubusercontent.com/82092080/151808031-7c73ca04-1c30-421e-a77b-13f2e564de87.png)
 ![Wofi](https://user-images.githubusercontent.com/82092080/151808156-95f422cb-b853-401b-954d-1caaba2dc075.png)
 ![Alacritty, neofetch and vim](https://user-images.githubusercontent.com/82092080/151808197-fd3e04ee-a254-48c5-b090-90de5866d78b.png)
