@@ -13,7 +13,7 @@ window:
     x:              16
     y:              16
   dynamic_padding:  true
-background_opacity: 1
+  opacity: 1
 
 colors:
   primary:
